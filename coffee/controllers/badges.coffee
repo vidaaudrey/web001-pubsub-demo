@@ -11,3 +11,4 @@ module.exports.save = (req, res, next) ->
 
 # Send badges to pubsub socket in model 
 module.exports.send = (req, res, next) ->
+    next()

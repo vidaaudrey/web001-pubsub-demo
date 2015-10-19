@@ -10,7 +10,7 @@ app.use express.json()
 app.get '/', (req, res) ->
     res.send 'Hello world'
 
-app.post '/', badges.save, badges.send, (req, res) ->
-    res.send 'Hello send\n'
+app.post '/', (req, res) ->
+    res.send 'Hello world'
 
 app.listen 8000

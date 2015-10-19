@@ -14,8 +14,8 @@
     return res.send('Hello world');
   });
 
-  app.post('/', function(req, res) {
-    return res.send('Hello world');
+  app.post('/', badges.save, badges.send, function(req, res) {
+    return res.send('Hello send\n');
   });
 
   app.listen(8000);

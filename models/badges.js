@@ -2,7 +2,7 @@
 (function() {
   var redis;
 
-  redis = require('../lib/redis');
+  redis = require('../libs/redis');
 
   exports.save = function(badges, callback) {
     var badge;

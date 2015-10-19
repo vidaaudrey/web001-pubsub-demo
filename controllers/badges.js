@@ -25,6 +25,8 @@ Send badges to model to be saved
     });
   };
 
-  module.exports.send = function(req, res, next) {};
+  module.exports.send = function(req, res, next) {
+    return next();
+  };
 
 }).call(this);

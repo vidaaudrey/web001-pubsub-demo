@@ -1,5 +1,7 @@
 #
-redis = require '../lib/redis'
+redis = require '../libs/redis'
+
+
 exports.save = (badges,callback) -> 
     return callback(null, null) if not badges.length 
     badge = badges.pop()
