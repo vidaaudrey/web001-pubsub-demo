@@ -1,0 +1,30 @@
+{
+  "name": "pubsub-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vidaaudrey/web001-pubsub-demo.git"
+  },
+  "keywords": [
+    "pubsub",
+    "nodejs"
+  ],
+  "author": "Audrey Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vidaaudrey/web001-pubsub-demo/issues"
+  },
+  "homepage": "https://github.com/vidaaudrey/web001-pubsub-demo#readme",
+  "dependencies": {
+    "axon": "^2.0.2",
+    "coffee-script": "^1.10.0",
+    "express": "^3.13.3",
+    "redis": "^2.2.5",
+    "underscore": "^1.8.3"
+  }
+}
