@@ -14,10 +14,14 @@
     return res.send('Hello world');
   });
 
+  app.get('/badges', badges.get);
+
   app.post('/', badges.save, badges.send, function(req, res) {
     return res.send('Hello send\n');
   });
 
-  app.listen(8000);
+  app.listen(8000, function() {
+    return console.log('Listening to port 8000');
+  });
 
 }).call(this);

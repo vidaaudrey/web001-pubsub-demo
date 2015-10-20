@@ -11,7 +11,7 @@ Send badges to model to be saved
 
   model = require('../models/badges');
 
-  module.exports.save = function(req, res, next) {
+  exports.save = function(req, res, next) {
     var badges;
     badges = _.clone(req.body);
     return model.save(badges, function(err) {
@@ -20,13 +20,36 @@ Send badges to model to be saved
           error: true
         });
       } else {
-        return next();
+        next();
+        return model.trim();
       }
     });
   };
 
-  module.exports.send = function(req, res, next) {
-    return next();
+  exports.send = function(req, res, next) {
+    var badges;
+    badges = _.clone(req.body);
+    return model.send(badges, function(err) {
+      if (err) {
+        return res.json(503, {
+          error: true
+        });
+      }
+      return res.json(200, {
+        error: null
+      });
+    });
+  };
+
+  exports.get = function(req, res, next) {
+    return model.get(function(err, data) {
+      if (err) {
+        return res.json(503, {
+          error: true
+        });
+      }
+      return res.json(200, data);
+    });
   };
 
 }).call(this);
